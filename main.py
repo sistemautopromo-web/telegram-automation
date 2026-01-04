@@ -3,10 +3,10 @@ import requests
 import csv
 import io
 
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-CHAT_ID = os.getenv("CHANNEL_1_CHAT_ID")
+TELEGRAM_TOKEN = os.getenv("8553327134:AAGr9CxyCUmToszfhBjs-B18BvvopbbsqyI")
+CHAT_ID = os.getenv("-1003669160299")
 
-SHEET_URL = "COLE_AQUI_O_LINK_DA_PLANILHA/export?format=csv"
+SHEET_URL = "https://docs.google.com/spreadsheets/d/1w6wh_QL0_yf-phUJOChBrPSnxkU477QteaTr6TihsI8/edit?usp=sharing/export?format=csv"
 
 def send_message(text):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
