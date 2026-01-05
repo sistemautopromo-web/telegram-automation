@@ -8,6 +8,6 @@ requests.post(
     f"https://api.telegram.org/bot{TOKEN}/sendMessage",
     json={
         "chat_id": CHAT_ID,
-        "text": "✅ TESTE COM SECRETS FUNCIONANDO!"
+        "text": "🚀 AUTOMAÇÃO FUNCIONANDO PELO GITHUB!"
     }
 )
