@@ -1,14 +1,13 @@
-import os
 import requests
 
-token = os.environ["TELEGRAM_TOKEN"]
-chat_id = os.environ["TELEGRAM_CHAT_ID"]
+TOKEN = 8553327134:AAGr9CxyCUmToszfhBjs-B18BvvopbbsqyI
 
-mensagem = "✅ Teste automático funcionando!"
+CHAT_ID = -1003669160299
 
-url = f"https://api.telegram.org/bot{token}/sendMessage"
-
-requests.post(url, json={
-    "chat_id": chat_id,
-    "text": mensagem
-})
+requests.post(
+    f"https://api.telegram.org/bot{TOKEN}/sendMessage",
+    json={
+        "chat_id": CHAT_ID,
+        "text": "🔥 TESTE DIRETO DO GITHUB 🔥"
+    }
+)
