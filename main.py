@@ -1,13 +1,21 @@
-import os
-import requests
+name: Envio Telegram
 
-TOKEN = os.environ["TELEGRAM_TOKEN"]
-CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
+on:
+  workflow_dispatch:
 
-requests.post(
-    f"https://api.telegram.org/bot{TOKEN}/sendMessage",
-    json={
-        "chat_id": CHAT_ID,
-        "text": "✅ AGORA SIM, SECRETS CORRETOS!"
-    }
-)
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install requests
+
+      - run: python main.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
