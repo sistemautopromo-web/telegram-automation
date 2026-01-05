@@ -1,8 +1,8 @@
 import requests
 
-TOKEN = 8553327134:AAGr9CxyCUmToszfhBjs-B18BvvopbbsqyI
+TOKEN = "8553327134:AAGr9CxyCUmToszfhBjs-B18BvvopbbsqyI"
 
-CHAT_ID = -1003669160299
+CHAT_ID = "-1003669160299"
 
 requests.post(
     f"https://api.telegram.org/bot{TOKEN}/sendMessage",
