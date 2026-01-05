@@ -12,3 +12,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: python main.py
+- run: python main.py
+  env:
+    TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+    TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
